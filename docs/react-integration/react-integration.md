@@ -4,5 +4,4 @@
 
 - Импорт из модуля
 - React Context API
-
-Третий способ - с помощью конструкции `inject` - является устаревшим. Эта функция была удалена из MobX 6 в пользу хука `useContext` из React Context API.
+- Функция `inject`. Этот подход является [устаревшим](https://github.com/mobxjs/mobx/tree/main/packages/mobx-react#provider-and-inject) и рассматриваться в книге не будет. Эта функция не была включена в mobx-react-lite, так как вместо неё можно использовать хук `useContext` из React Context API.
