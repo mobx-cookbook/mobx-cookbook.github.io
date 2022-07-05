@@ -13,7 +13,7 @@ npx create-react-app my-app --template typescript
 MobX устанавливается с помощью npm так же, как и любой другой пакет:
 
 ```sh
-npm install mobx --save
+npm install mobx
 ```
 
 ### React
@@ -23,7 +23,7 @@ npm install mobx --save
 В связи с повсеместным внедрением React-хуков, имеет смысл форсировать использование функциональных компонентов. Поэтому достаточно будет установить пакет `mobx-react-lite`:
 
 ```sh
-npm install mobx-react-lite --save
+npm install mobx-react-lite
 ```
 
 ### TypeScript
