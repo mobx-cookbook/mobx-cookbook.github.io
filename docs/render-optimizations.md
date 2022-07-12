@@ -68,7 +68,7 @@ const App = observer(() => {
 Вышесказанное особенно важно при рендеринге больших коллекций. Чем меньше ваши компоненты, тем меньше изменений они должны будут повторно отобразить.
 
 ```jsx
-const Component = observer(props) => (
+const Component = observer((props) => (
   <div>
     {props.user.name}
     <ul>
@@ -85,7 +85,7 @@ const Component = observer(props) => (
 Поэтому при работе с массивами, рекомендуется писать компоненты, которые просто рендерят коллекцию и больше ничего не делают.
 
 ```jsx
-const Component = observer(props) => (
+const Component = observer((props) => (
   <div>
     {props.user.name}
     <TodosView todos={props.todos} />

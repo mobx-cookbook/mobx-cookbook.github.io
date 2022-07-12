@@ -76,11 +76,11 @@ export const App = observer(function App() {
 import { makeAutoObservable } from 'mobx'
 
 class Store {
+  count = 0
+  
   constructor() {
     makeAutoObservable(this)
   }
-
-  count = 0
 
   inc = () => {
     this.count++
@@ -100,17 +100,17 @@ export const counterStore = new Store()
 
 Но эта логика ломается если добавить асинхронные действия в наш экшн.
 
-```js
+```typescript
 import { makeAutoObservable } from 'mobx'
 
 const delay = (ms: number) => new Promise((_) => setTimeout(_, ms))
 
 class Store {
+  count = 0
+  
   constructor() {
     makeAutoObservable(this)
   }
-
-  count = 0
 
   inc = async () => {
     await delay(10)
@@ -139,7 +139,7 @@ export const counterStore = new Store()
 {name: "observerApp", type: "reaction", spyReportStart: true}
 ```
 
-Механизм объединение обновлений MobX нарушается, потому что мы "окрасили"[^1] нашу асинхронную функцию. Запустив из какой-то точки синхронного выполнения асинхронный код — вы уже не сможете из асинхронного кода вернуться обратно к точке вызова. То есть любые шаги после await не находятся в том же тике.
+Механизм объединение обновлений MobX нарушается, потому что мы "окрасили"[^1] нашу асинхронную функцию. Запустив из какой-то точки синхронного выполнения асинхронный код — вы уже не сможете из асинхронного кода вернуться к точке вызова. То есть любые шаги после await не находятся в том же тике.
 
 ### runInAction
 
@@ -210,11 +210,11 @@ import { makeAutoObservable } from 'mobx'
 const delay = (ms: number) => new Promise((_) => setTimeout(_, ms))
 
 class Store {
+  count = 0
+
   constructor() {
     makeAutoObservable(this)
   }
-
-  count = 0
 
   *inc() {
     yield delay(10)
