@@ -5,12 +5,12 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula")
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "MobX-Cookbook",
-  url: "https://your-docusaurus-test-site.com",
+  url: "https://mobx-cookbook.github.io",
   baseUrl: "/",
   favicon: "favicon.png",
 
   organizationName: "mobx-cookbook",
-  projectName: "cookbook",
+  projectName: "mobx-cookbook.github.io",
 
   i18n: {
     defaultLocale: "ru",
