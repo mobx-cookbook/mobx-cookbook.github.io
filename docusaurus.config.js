@@ -8,7 +8,7 @@ const config = {
   url: "https://mobx-cookbook.github.io",
   baseUrl: "/",
   favicon: "favicon.png",
-
+  trailingSlash: false,
   organizationName: "mobx-cookbook",
   projectName: "mobx-cookbook.github.io",
 
