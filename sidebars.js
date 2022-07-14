@@ -24,6 +24,7 @@ const sidebars = {
           items: [
             "react-integration/singleton",
             "react-integration/context-api",
+            "react-integration/conclusion",
           ],
         },
       ],
