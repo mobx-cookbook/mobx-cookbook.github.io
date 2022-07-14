@@ -39,7 +39,7 @@ const sidebars = {
       type: "category",
       label: "Продвинутые темы",
       link: { type: "doc", id: "advanced" },
-      items: ["render-optimizations", "mobx-inside"],
+      items: ["render-optimizations", "mobx-inside", "classess-vs-functions"],
     },
   ],
 }
