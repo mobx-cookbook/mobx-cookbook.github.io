@@ -25,6 +25,8 @@ const config = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: "/",
+          sidebarCollapsible: true,
+          sidebarCollapsed: false
           // editUrl: 'https://github.com/mobx-cookbook/cookbook',
         },
       }),
@@ -41,21 +43,6 @@ const config = {
           src: "favicon.png",
         },
         items: [
-          {
-            type: "doc",
-            docId: "installation",
-            label: "Введение", // Теория?
-          },
-          {
-            type: "doc",
-            docId: "practice",
-            label: "Практика",
-          },
-          {
-            type: "doc",
-            docId: "advanced",
-            label: "Продвинутые темы",
-          },
           {
             href: "https://github.com/mobx-cookbook/cookbook",
             label: "GitHub",
