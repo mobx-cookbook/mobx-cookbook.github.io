@@ -41,6 +41,12 @@ const sidebars = {
       link: { type: "doc", id: "advanced" },
       items: ["render-optimizations", "mobx-inside", "classess-vs-functions"],
     },
+    {
+      type: "category",
+      label: "Поддержка книги",
+      link: { type: "doc", id: "support" },
+      items: ["support"],
+    },
   ],
 }
 

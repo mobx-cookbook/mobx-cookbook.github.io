@@ -25,8 +25,6 @@ const config = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: "/",
-          sidebarCollapsible: true,
-          sidebarCollapsed: false
           // editUrl: 'https://github.com/mobx-cookbook/cookbook',
         },
       }),
