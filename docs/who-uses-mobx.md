@@ -1,5 +1,7 @@
 # Кто использует Mobx?
 
+Mobx по-прежнему активно используется, что подтверждают как популярные Open Source-проекты, так и блоги крупных компаний.
+
 ### Постсоветское пространство
 - Mobx в Mail.ru (VK): https://habr.com/ru/company/vk/blog/522312/
 - Mobx в Tinkoff: https://habr.com/ru/company/tinkoff/blog/503136/
