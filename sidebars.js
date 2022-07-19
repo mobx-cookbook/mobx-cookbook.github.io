@@ -47,6 +47,12 @@ const sidebars = {
       link: { type: "doc", id: "support" },
       items: ["support"],
     },
+    {
+      type: "category",
+      label: "Awesome Mobx",
+      link: { type: "doc", id: "awesome" },
+      items: ["awesome", "who-uses-mobx"],
+    },
   ],
 }
 
