@@ -12,6 +12,12 @@
 
 **Гафаров Назим** - популяризатор MobX. Работал как в стартапах, так и в крупных компаниях (Яндекс, Mail) в роли ведущего разработчика. Регулярно выступает на IT-конференциях, в том числе на HolyJS и React Moscow. [GitHub](https://github.com/zapolnoch).
 
+## Спонсоры
+
+Мы очень ценим [поддержку](https://mobx-cookbook.github.io/support) книги. Спасибо тем, кто помогает написанию и придаёт больше мотивации продолжать:
+
+- Igor «InoY» Zvyagintsev aka [@inoyakaigor](https://github.com/inoyakaigor)
+
 ### Лицензия
 
 Все содержимое лицензировано по лицензии [Creative Commons Attribution Non Commercial Share Alike 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ru).
