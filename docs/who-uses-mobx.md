@@ -15,6 +15,7 @@ Mobx по-прежнему активно используется, что по�
 - Tinkoff: https://habr.com/ru/company/tinkoff/blog/503136/
 - Яндекс: https://habr.com/ru/company/yandex/blog/339054/
 - OK: https://habr.com/ru/company/odnoklassniki/blog/486810/
+- СДЭК: https://www.youtube.com/watch?v=5MdwNGttfLg
 
 ### Open Source
 - [cypress](https://github.com/cypress-io/cypress) (~39k ⭐) - Инструмент для E2E-тестирования
