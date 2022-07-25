@@ -42,7 +42,7 @@ spy((ev) => {
 import { observer } from 'mobx-react-lite'
 import { counterStore } from './counter.store'
 
-const App = () => {
+export const App = observer(() => {
   const { count, inc, dec } = counterStore
 
   return (
@@ -53,9 +53,7 @@ const App = () => {
       <button onClick={dec}>-</button>
     </div>
   )
-}
-
-export default observer(App)
+})
 ```
 
 Если вы предпочитаете именованные экспорты, то можете обернуть в `observer` обычную функцию, а не анонимную:

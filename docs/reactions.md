@@ -22,7 +22,7 @@ autorun(() => {
 import { observer } from 'mobx-react-lite'
 import { counterStore } from './counter.store'
 
-const App = observer(() => {
+export const App = observer(() => {
   return (
     <div className='App'>
       <h1>{counterStore.count}</h1>
@@ -33,8 +33,6 @@ const App = observer(() => {
     </div>
   )
 })
-
-export default App
 ```
 
 Мы видим тут обычный React-компонент, который обернут в функцию `observer` из пакета `mobx-react-lite`.
