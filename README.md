@@ -16,7 +16,8 @@
 
 Мы очень ценим [поддержку](https://mobx-cookbook.github.io/support) книги. Спасибо тем, кто помогает написанию и придаёт больше мотивации продолжать:
 
-- Igor «InoY» Zvyagintsev aka [@inoyakaigor](https://github.com/inoyakaigor)
+- Igor «InoY» Zvyagintsev ([@inoyakaigor](https://github.com/inoyakaigor))
+- Sergey Sibara ([@sergeysibara](https://github.com/sergeysibara))
 
 ### Лицензия
 
