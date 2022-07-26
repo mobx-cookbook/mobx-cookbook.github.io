@@ -2,3 +2,4 @@
 .docusaurus
 .cache-loader
 .idea
+deploy-egor.sh
