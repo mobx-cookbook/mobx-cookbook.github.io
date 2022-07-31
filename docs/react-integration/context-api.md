@@ -7,7 +7,7 @@
 ```typescript
 import { createContext } from "react";
 
-export const UserThemeContext = createContext<"light" | "dark" | null>(null);
+export const UserThemeContext = createContext<"light" | "dark" | null>(null)
 ```
 
 Шаг 2. Инициализируем контекст:
@@ -24,7 +24,7 @@ const Page = () => {
 
 ```typescript jsx
 const Child = () => {
-  const theme = useContext(UserThemeContext);
+  const theme = useContext(UserThemeContext)
 
   // Теперь у переменной theme значение 'dark' | 'light' | null
 };
@@ -37,8 +37,8 @@ const Child = () => {
 ```typescript
 // root-store.ts
 export class RootStore {
-  bannerStore = new BannerStore();
-  authStore = new AuthStore();
+  bannerStore = new BannerStore()
+  authStore = new AuthStore()
 }
 ```
 
@@ -47,9 +47,9 @@ export class RootStore {
 ```typescript
 // root-store-context.ts
 
-import { RootStore } from "./root-store";
+import { RootStore } from "./root-store"
 
-export const RootStoreContext = createContext<RootStore | null>(null);
+export const RootStoreContext = createContext<RootStore | null>(null)
 
 export const useStore = () => {
   const context = useContext(RootStoreContext);
@@ -69,8 +69,8 @@ export const useStore = () => {
 ```typescript jsx
 // app.tsx
 
-import { RootStoreContext } from "./root-store-context";
-import { RootStore } from "./root-store";
+import { RootStoreContext } from "./root-store-context"
+import { RootStore } from "./root-store"
 
 const App = () => {
   return (
@@ -85,7 +85,7 @@ const App = () => {
 
 ```typescript jsx
 const Child = observer(() => {
-  const { authStore, bannerStore } = useStore();
+  const { authStore, bannerStore } = useStore()
 
   //
 });
@@ -99,14 +99,14 @@ React Context API - это не стейт-менеджер, а транспор
 
 ```typescript jsx
 const Avatar = () => {
-  const { avatar, userName } = useContext(UserContext);
+  const { avatar, userName } = useContext(UserContext)
 
   // Рендерим только avatar и userName
 };
 
 const UserForm = () => {
   const { avatar, userName, age, dateOfBirth, changeProfile } =
-    useContext(UserContext);
+    useContext(UserContext)
 
   // Рендерим форму редактирования пользователя и вызываем changeProfile при сохранении данных
 };
@@ -116,13 +116,13 @@ const UserForm = () => {
 
 ```typescript jsx
 const Avatar = observer(() => {
-  const { authStore } = useStore();
+  const { authStore } = useStore()
 
   // Рендерим только avatar и userName
 });
 
 const UserForm = observer(() => {
-  const { authStore } = useStore();
+  const { authStore } = useStore()
 
   // Рендерим форму редактирования пользователя и вызываем changeProfile при сохранении данных
 });

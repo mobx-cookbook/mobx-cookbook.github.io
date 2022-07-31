@@ -4,22 +4,22 @@
 
 ```typescript jsx
 class BannerStore {
-  isOpen = false;
+  isOpen = false
 
   constructor() {
-    makeAutoObservable(this);
+    makeAutoObservable(this)
   }
 
   open() {
-    this.isOpen = true;
+    this.isOpen = true
   }
 
   close() {
-    this.isOpen = false;
+    this.isOpen = false
   }
 }
 
-export const bannerStore = new BannerStore();
+export const bannerStore = new BannerStore()
 ```
 
 Подключаем его к компоненту:
@@ -34,7 +34,7 @@ export const Page = observer(() => {
       ...
     </div>
   );
-});
+})
 ```
 
 Это самый простой способ, но у него есть ряд недостатков:
@@ -77,7 +77,7 @@ class BannerStore {
   ...
 
 +  reset() {
-+    this.isOpen = false;
++    this.isOpen = false
 +  }
 }
 ```
@@ -87,7 +87,7 @@ class BannerStore {
 ```diff
 describe('Page', () => {
 +  beforeEach(() => {
-+    bannerStore.reset();
++    bannerStore.reset()
 +  })
 ...
 
@@ -100,9 +100,9 @@ describe('Page', () => {
 Данная проблема не специфична для Mobx или классов. В JS модули могут быть stateful, то есть иметь состояние. Простой пример stateful модуля:
 
 ```js
-export let count = 0;
+export let count = 0
 
-export const increase = () => count++;
+export const increase = () => count++
 ```
 
 Теперь значение переменной `count` будет общим для всех файлов, которые импортируют эту переменную.

@@ -1,6 +1,6 @@
 // @ts-check
 
-/** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
+/** @type {import("@docusaurus/plugin-content-docs").SidebarsConfig} */
 const sidebars = {
   tutorialSidebar: [
     {
@@ -11,12 +11,8 @@ const sidebars = {
         "classes",
         "observable-state",
         "reactions",
-        {
-          type: "category",
-          label: "Actions",
-          link: { type: "doc", id: "actions" },
-          items: ["actions", "async-actions"],
-        },
+        "actions",
+        "async-actions",
         {
           type: "category",
           label: "Доступ к состоянию",
