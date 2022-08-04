@@ -14,10 +14,17 @@ slug: /
 
 ## Об авторах
 
-**Егор Горбачёв** - фулл-стек разработчик, мейнтейнер MobX, автор статей по MobX и TypeScript, администратор русскоговорящего MobX-сообщества в Telegram. Работает удалённо, путешествуя по миру.
+**Егор Горбачёв** - фулл-стек разработчик, мейнтейнер MobX, автор статей по MobX и TypeScript. Путешествует по миру, работая удалённо. [GitHub](https://github.com/kubk).
 
-**Гафаров Назим** - популяризатор MobX. Работал как в стартапах, так и в крупных компаниях (Яндекс, Mail) в роли ведущего разработчика. Регулярно выступает на IT-конференциях, в том числе на HolyJS и React Moscow.
+**Гафаров Назим** - популяризатор MobX. Работал как в стартапах, так и в крупных компаниях (Яндекс, Mail) в роли ведущего разработчика. Регулярно выступает на IT-конференциях, в том числе на HolyJS и React Moscow. [GitHub](https://github.com/zapolnoch).
 
-## Лицензия
+## Спонсоры
+
+Мы очень ценим [поддержку](https://mobx-cookbook.github.io/support) книги. Спасибо тем, кто помогает написанию и придаёт больше мотивации продолжать:
+
+- Igor «InoY» Zvyagintsev ([@inoyakaigor](https://github.com/inoyakaigor))
+- Sergey Sibara ([@sergeysibara](https://github.com/sergeysibara))
+
+### Лицензия
 
 Все содержимое лицензировано по лицензии [Creative Commons Attribution Non Commercial Share Alike 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ru).
