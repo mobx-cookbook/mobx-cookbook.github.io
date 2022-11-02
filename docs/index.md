@@ -24,6 +24,7 @@ slug: /
 
 - Igor «InoY» Zvyagintsev ([@inoyakaigor](https://github.com/inoyakaigor))
 - Sergey Sibara ([@sergeysibara](https://github.com/sergeysibara))
+- Yuri Mikhin ([@mikhin](https://github.com/mikhin))
 
 ### Лицензия
 
