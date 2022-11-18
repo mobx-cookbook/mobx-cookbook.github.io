@@ -1,6 +1,6 @@
 # Кто использует Mobx?
 
-Mobx по-прежнему активно используется, что подтверждают как популярные Open Source-проекты, так и блоги крупных компаний.
+Mobx активно используется, что подтверждают как популярные Open Source-проекты, так и блоги крупных компаний.
 
 ### Какие компании используют
 - [Amazon](https://github.com/mobxjs/mobx/discussions/681#discussioncomment-104604)
@@ -9,6 +9,13 @@ Mobx по-прежнему активно используется, что по�
 - [Coinbase](https://github.com/mobxjs/mobx/discussions/681#discussioncomment-104579)
 - [Oracle](https://github.com/mobxjs/mobx/discussions/681#discussioncomment-104687)
 - [Baidu](https://github.com/mobxjs/mobx/discussions/681#discussioncomment-104688)
+
+### Какие сайты используют
+Список сайтов, сгенерированный анализатором JS-бандлов GradeJS:
+- https://gradejs.com/package/mobx
+- https://gradejs.com/package/mobx-react-lite
+
+В числе прочих сайтов есть udemy.com, grammarly.com, steamcommunity.com, postman.com
 
 ### Как используют
 - Mail.ru (VK): https://habr.com/ru/company/vk/blog/522312/
