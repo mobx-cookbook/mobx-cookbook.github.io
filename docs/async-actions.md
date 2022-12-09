@@ -170,6 +170,7 @@ configure({
 
 ```js
 configure({
+  enforceActions: 'never',
   reactionScheduler: (f) => {
     setTimeout(() => {
       f()
@@ -182,6 +183,7 @@ configure({
 
 ```js
 configure({
+  enforceActions: 'never',
   reactionScheduler: (f) => setTimeout(f),
 })
 ```
