@@ -32,5 +32,6 @@ Mobx активно используется, что подтверждают к
 - [tldraw](https://github.com/tldraw/tldraw) (~9k ⭐) - Утилита для рисования
 - [alibaba/lowcode-engine](https://github.com/alibaba/lowcode-engine) (~7k ⭐) - Alibaba тоже использует Mobx
 - [previewjs](https://github.com/fwouts/previewjs) (~1k ⭐) - Расширение для VSCode/Webstorm
+- [signal](https://github.com/ryohey/signal) (~700 ⭐) - Онлайн музыкальный секвенсор
 
 Для проверки того, используется ли Mobx в проекте на GitHub, достаточно внутри репозитория в поиске вбить "mobx". Пример результата: https://github.com/Redocly/redoc/search?q=mobx
