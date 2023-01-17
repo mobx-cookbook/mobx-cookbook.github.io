@@ -32,8 +32,8 @@ const observable = (value) => ({
 const title = observable('Mobx article')
 const views = observable(10)
 
-const listener = () => console.log(title.get())
-title.subscribe(listener)
+const logTitle = () => console.log(title.get())
+title.subscribe(logTitle)
 
 title.set('Lets write Mobx under 50 LOC')
 views.set(11)
@@ -83,17 +83,27 @@ const Article = () => {
 ### Шаг 3
 Для понимания какие компоненты от каких observable зависят, MobX запоминает прочитанные observable значения во время отрисовки компонента. Попробуем воссоздать `autorun`, применив этот подход. Для начала добавим запоминание прочитанных observable в глобальную переменную `readObservables`:
 
-```typescript
-const readObservables = new Set()
+```diff
++const readObservables = new Set()
 
 const observable = (value) => ({
-  // ...
+  value,
+  observers: new Set(),
+  subscribe(observer) {
+    this.observers.add(observer)
+  },
+  unsubscribe(listener) {
+    this.observers.delete(observer)
+  },
   get() {
-    readObservables.add(this)
-
++   readObservables.add(this)
+    
     return this.value
   },
-  // ...
+  set(value) {
+    this.value = value
+    this.observers.forEach((notify) => notify())
+  },
 })
 ```
 
