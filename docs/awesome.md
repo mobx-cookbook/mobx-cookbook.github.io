@@ -4,7 +4,7 @@
 
 ### Доклады
 - [Назим Гафаров — Воркшоп: Знакомство с MobX](https://www.youtube.com/watch?v=gXy1H3yZtSA)
-- [MobX, or: Going from Mutable to Immutable to Reactive State Management](https://www.youtube.com/watch?v=ZHxFrbK3VB0) - От автора Mobx. Сначала показывается наивный мутабельный подход управления состоянием, потом рефакторинг на иммутабельный + куча оптимизиаций чтобы не тормозило, затем рефакторинг на Mobx, который производительный по умолчанию.
+- [MobX, or: Going from Mutable to Immutable to Reactive State Management](https://www.youtube.com/watch?v=ZHxFrbK3VB0) - От автора Mobx. Сначала показывается наивный мутабельный подход управления состоянием, потом рефакторинг на иммутабельный + множество ручных оптимизаций, затем рефакторинг на Mobx, который производительный по умолчанию.
 
 ### Пакеты
 - [mobx-log](https://github.com/kubk/mobx-log) - Логгер для Mobx с поддержкой Proxy-форматтеров
