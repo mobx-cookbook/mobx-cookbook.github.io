@@ -29,7 +29,7 @@ const sidebars = {
       type: "category",
       label: "Практика",
       link: { type: "doc", id: "practice" },
-      items: ["practice"],
+      items: [],
     },
     {
       type: "category",
