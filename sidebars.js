@@ -41,13 +41,13 @@ const sidebars = {
       type: "category",
       label: "Поддержка книги",
       link: { type: "doc", id: "support" },
-      items: [],
+      items: ["support"],
     },
     {
       type: "category",
       label: "Awesome Mobx",
       link: { type: "doc", id: "awesome" },
-      items: ["who-uses-mobx"],
+      items: ["awesome", "who-uses-mobx"],
     },
   ],
 }
