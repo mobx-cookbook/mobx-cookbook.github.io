@@ -173,6 +173,12 @@ const observer = (component) => (...props) => {
 
 Эта функция очень похожа на функцию `autorun` выше, за исключением того, что `observer` принимает компонент и возвращает результат отрисовки этого компонента. Рабочий пример вы можете посмотреть на CodeSandbox: https://codesandbox.io/s/mystifying-jones-vc18p?file=/index.js
 
+### Результат
+
+import CodeViewer from '/src/components/code-viewer';
+
+<CodeViewer exampleName="mobx-in-50-lines-of-code" />
+
 ### Вывод
 
 Мы создали очень упрощённую версию MobX для понимания того, как его "магия" работает внутри. Как видим, здесь нет никакой магии, только чистая изобретательность.
