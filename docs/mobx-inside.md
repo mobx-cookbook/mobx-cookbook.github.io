@@ -13,7 +13,7 @@ const observable = (value) => ({
   subscribe(observer) {
     this.observers.add(observer)
   },
-  unsubscribe(listener) {
+  unsubscribe(observer) {
     this.observers.delete(observer)
   },
   get() {
@@ -44,6 +44,9 @@ views.set(11)
 ```
 Lets write Mobx under 50 LOC
 ```
+import CodeViewer from '/src/components/code-viewer';
+
+<CodeViewer exampleName="mobx-in-50-lines-of-code-1" showConsole />
 
 Мы создали два observable - _title_ и _views_, затем мы обновили их значения. Обратите внимание, что мы подписались только на изменения _title_, поэтому `console.log` отработал только один раз. Когда компонент не обновляется в ответ на изменение observable - значит дело в отсутствии подписки. Именно это часто ошибочно называют потерей реактивности. Как видим, правильнее охарактеризовать это как отсутствие подписки. Давайте воспользуемся этим подходом для перерисовки компонентов React.
 
@@ -71,12 +74,20 @@ const Article = () => {
 
   return (
     <div>
-      Article title: {title.get()}
-      Views: {views.get()}
+      Article title: {title.get()}{' '}
+      
+      Views: {views.get()}{' '}
+      
+      <button onClick={() => {
+        views.set(views.get() + 1);
+      }}>Increase views</button>
     </div>
   )
 }
 ```
+
+<CodeViewer exampleName="mobx-in-50-lines-of-code-2" />
+
 
 Для перерисовки компонента мы создали хук `useRerender`. Хук `useEffect` используется для ручной подписки на изменения _title_ и _views_. Это пример явных подписок. Легко заметить, что такой подход очень многословный, с таким подходом легко допустить ошибки. Вы можете забыть подписаться на используемое observable значение, можете забыть отписаться, что будет приводить к утечкам памяти. Вы можете забыть убрать подписку если компоненту уже не нужен определённый observable. Представьте, как было бы удобно, если бы подписки и отписки были автоматические? MobX именно это и делает за нас!
 
@@ -92,7 +103,7 @@ const observable = (value) => ({
   subscribe(observer) {
     this.observers.add(observer)
   },
-  unsubscribe(listener) {
+  unsubscribe(observer) {
     this.observers.delete(observer)
   },
   get() {
@@ -145,6 +156,8 @@ Article "Mobx article". Views 11
 Article "Lets write Mobx under 50 LOC". Views 11
 ```
 
+<CodeViewer exampleName="mobx-in-50-lines-of-code-3" showConsole />
+
 Функция `autorun` работает правильно. Мы воссоздали механизм автоматических подписок. Обратите внимание, что после вызова `dispose` слушатель не вызвался, потому что эта функция прекращает подписку.
 
 ### Шаг 4
@@ -171,7 +184,11 @@ const observer = (component) => (...props) => {
 }
 ```
 
-Эта функция очень похожа на функцию `autorun` выше, за исключением того, что `observer` принимает компонент и возвращает результат отрисовки этого компонента. Рабочий пример вы можете посмотреть на CodeSandbox: https://codesandbox.io/s/mystifying-jones-vc18p?file=/index.js
+Эта функция очень похожа на функцию `autorun` выше, за исключением того, что `observer` принимает компонент и возвращает результат отрисовки этого компонента. 
+
+### Результат
+
+<CodeViewer exampleName="mobx-in-50-lines-of-code-end" />
 
 ### Вывод
 
