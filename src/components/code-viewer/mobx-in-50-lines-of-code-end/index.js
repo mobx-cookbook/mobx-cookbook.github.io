@@ -43,14 +43,14 @@ const observer = (component) => (...props) => {
   return result;
 };
 
-const timer = observable(0);
+const counter = observable(0);
 
 const increment = () => {
-  timer.set(timer.get() + 1);
+  counter.set(counter.get() + 1);
 };
 
 const CounterView = observer(() => (
-  <button onClick={increment}>Clicked times: {timer.get()}</button>
+  <button onClick={increment}>Clicked times: {counter.get()}</button>
 ));
 
 export default CounterView;

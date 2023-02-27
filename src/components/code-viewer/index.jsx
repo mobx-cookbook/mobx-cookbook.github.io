@@ -4,14 +4,15 @@ import {
 } from '@codesandbox/sandpack-react';
 
 function CodeViewer({
-  exampleName
+  exampleName,
+  showConsole,
 }) {
   const [filesNamesToFilesSrcMap, setFilesNamesToFilesSrcMap] = useState(null);
 
   useEffect(() => {
     const loadFiles = async () => {
-      const entyPointFileContent = await import(`!raw-loader!./${exampleName}/index.js`);
-      const defaultExportFromEntryPointFile = entyPointFileContent.default;
+      const entryPointFileContent = await import(`!raw-loader!./${exampleName}/index.js`);
+      const defaultExportFromEntryPointFile = entryPointFileContent.default;
       const entyPointFileName = `/App.js`
       setFilesNamesToFilesSrcMap({
         [entyPointFileName]: defaultExportFromEntryPointFile
@@ -30,9 +31,12 @@ function CodeViewer({
 
 
   return (
-    <Sandpack options={{
-      editorHeight
-    }} files={filesNamesToFilesSrcMap} template="react" />
+    <div style={{ paddingBottom: 16 }}>
+      <Sandpack options={{
+        editorHeight,
+        showConsole,
+      }} files={filesNamesToFilesSrcMap} template="react" />
+    </div>
   )
 }
 
