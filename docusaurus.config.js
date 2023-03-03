@@ -17,6 +17,12 @@ const config = {
     locales: ["ru"],
   },
 
+  plugins: [
+    ['docusaurus-plugin-yandex-metrica', {
+      counterID: '92679562',
+    }],
+  ],
+
   presets: [
     [
       "classic",
