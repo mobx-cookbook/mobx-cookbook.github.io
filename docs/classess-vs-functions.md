@@ -137,7 +137,7 @@ export type PlayerStore = ReturnType<typeof createPlayerStore>;
 Однако это ещё не всё. Имеем тип PlayerStore, у которого поле song не имеет union-типа, то есть Song потерялся:
 ```typescript
 export type PlayerStore = {
-  song: undefined;
+  song: undefined; // 👈 Должно быть `Song | undefined`
   isPlaying: boolean;
   playSong: (song: Song) => void;
   pause: () => void;
@@ -152,6 +152,9 @@ export type PlayerStore = {
 export const createPlayerStore = () => {
   return makeAutoObservable({
     song: undefined as Song | undefined,
+    // ...
+  })
+}
 // ...
 ```
 
