@@ -13,6 +13,7 @@ const sidebars = {
         "reactions",
         "actions",
         "async-actions",
+        "reduce-mobx-api-boilerplate",
         {
           type: "category",
           label: "Доступ к состоянию",
