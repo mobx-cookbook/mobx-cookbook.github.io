@@ -29,7 +29,6 @@ Mobx активно используется, что подтверждают к
 - [redoc](https://github.com/Redocly/redoc) (~17k ⭐) - Генератор OpenAPI/Swagger документации
 - [lens](https://github.com/lensapp/lens) (~19k ⭐) - Программа для управления Kubernetes
 - [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer) (~12k ⭐) - Утилита для анализа бандлов
-- [tldraw](https://github.com/tldraw/tldraw) (~9k ⭐) - Утилита для рисования
 - [alibaba/lowcode-engine](https://github.com/alibaba/lowcode-engine) (~7k ⭐) - Alibaba тоже использует Mobx
 - [previewjs](https://github.com/fwouts/previewjs) (~1k ⭐) - Расширение для VSCode/Webstorm
 - [signal](https://github.com/ryohey/signal) (~700 ⭐) - Онлайн музыкальный секвенсор
