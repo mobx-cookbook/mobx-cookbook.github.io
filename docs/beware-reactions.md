@@ -21,7 +21,7 @@ class UserStore {
   }
   
   setAge(age: number) {
-    this.age = age;
+    this.age = age
     if (this.isAllowed) {
       console.log('Доступ есть')
     } else {
@@ -46,8 +46,8 @@ class UserStore {
     makeAutoObservable(this)
   }
   
-  setAge(age) {
-    this.age = age;
+  setAge(age: number) {
+    this.age = age
     if (this.isAllowed) {
       console.log('Доступ есть')
     } else {
@@ -56,7 +56,7 @@ class UserStore {
   }
 
   get isAllowed() {
-    return this.age >= 18;
+    return this.age >= 18
   }
 }
 
@@ -65,7 +65,7 @@ userStore.setAge(20) // Теперь вывод 'Доступ есть'
 ```
 
 ### 2. Отсутствие строгого порядка реакций
-Мы можем пойти дальше и сделать цепочки computed, которые будут зависеть друг от друга. Mobx построит граф зависимостей и будет вычислять зависимые значения в строгом порядке:
+Мы можем пойти дальше и сделать цепочки computed, которые будут зависеть друг от друга. Mobx построит граф зависимостей и будет вычислять значения в строгом порядке:
 
 ```typescript
 class ShopStore {
@@ -111,7 +111,7 @@ class BrokenStore {
   total = 0
 
   constructor() {
-    makeAutoObservable(this);
+    makeAutoObservable(this)
     autorun(() => {
       runInAction(() => {
         this.subtotal = this.shop.items.reduce(
