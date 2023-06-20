@@ -9,6 +9,7 @@
 ### Пакеты
 - [mobx-log](https://github.com/kubk/mobx-log) - Логгер для Mobx с поддержкой Proxy-форматтеров
 - [mobx-persist-store](https://github.com/quarrant/mobx-persist-store) - Синхронизация полей стора с localStorage
+- [mobx-shallow-undo](https://github.com/httptoolkit/mobx-shallow-undo/) - Undo & redo для Mobx 
 
 ### Примеры проектов
 - [alias](https://github.com/kubk/alias) - Простая реализация знаменитой игры, в которой нужно объяснять слова, не называя их 
