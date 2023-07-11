@@ -33,9 +33,9 @@ const observer = (component) => (...props) => {
   const rerender = useRerender();
   readObservables.clear();
   const result = component(...props);
-  readObservables.forEach((observable) => observable.subscribe(rerender));
 
   useEffect(() => {
+    readObservables.forEach((observable) => observable.subscribe(rerender));
     return () =>
       readObservables.forEach((observable) => observable.unsubscribe(rerender));
   }, []);
