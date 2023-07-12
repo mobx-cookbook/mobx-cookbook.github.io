@@ -42,4 +42,4 @@ dispose()
 
 views.set(12)
 
-export default () => null;
+export default () => null

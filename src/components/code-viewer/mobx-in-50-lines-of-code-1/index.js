@@ -26,4 +26,4 @@ title.subscribe(logTitle)
 title.set('Lets write Mobx under 50 LOC')
 views.set(11)
 
-export default () => null;
+export default () => null

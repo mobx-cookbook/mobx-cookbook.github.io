@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react'
 
 const observable = (value) => ({
   value,
@@ -42,13 +42,14 @@ const Article = () => {
 
   return (
     <div>
-      Article title: {title.get()}{' '}
-
-      Views: {views.get()}{' '}
-
-      <button onClick={() => {
-        views.set(views.get() + 1);
-      }}>Increase views</button>
+      Article title: {title.get()} Views: {views.get()}{' '}
+      <button
+        onClick={() => {
+          views.set(views.get() + 1)
+        }}
+      >
+        Increase views
+      </button>
     </div>
   )
 }

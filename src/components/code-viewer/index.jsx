@@ -1,41 +1,39 @@
-import React, { useEffect, useState, useMemo } from 'react';
-import {
-  Sandpack
-} from '@codesandbox/sandpack-react';
+import React, { useEffect, useState, useMemo } from 'react'
+import { Sandpack } from '@codesandbox/sandpack-react'
 
-function CodeViewer({
-  exampleName,
-  showConsole,
-}) {
-  const [filesNamesToFilesSrcMap, setFilesNamesToFilesSrcMap] = useState(null);
+function CodeViewer({ exampleName, showConsole }) {
+  const [filesNamesToFilesSrcMap, setFilesNamesToFilesSrcMap] = useState(null)
 
   useEffect(() => {
     const loadFiles = async () => {
-      const entryPointFileContent = await import(`!raw-loader!./${exampleName}/index.js`);
-      const defaultExportFromEntryPointFile = entryPointFileContent.default;
+      const entryPointFileContent = await import(`!raw-loader!./${exampleName}/index.js`)
+      const defaultExportFromEntryPointFile = entryPointFileContent.default
       const entyPointFileName = `/App.js`
       setFilesNamesToFilesSrcMap({
-        [entyPointFileName]: defaultExportFromEntryPointFile
-      });
-    };
+        [entyPointFileName]: defaultExportFromEntryPointFile,
+      })
+    }
 
-    loadFiles();
-  }, []);
+    loadFiles()
+  }, [])
 
-  const editorHeight = '70vh';
+  const editorHeight = '70vh'
   const isFilesNotLoaded = !filesNamesToFilesSrcMap
 
   if (isFilesNotLoaded) {
-    return <div style={{ minHeight: editorHeight }} />;
+    return <div style={{ minHeight: editorHeight }} />
   }
-
 
   return (
     <div style={{ paddingBottom: 16 }}>
-      <Sandpack options={{
-        editorHeight,
-        showConsole,
-      }} files={filesNamesToFilesSrcMap} template="react" />
+      <Sandpack
+        options={{
+          editorHeight,
+          showConsole,
+        }}
+        files={filesNamesToFilesSrcMap}
+        template="react"
+      />
     </div>
   )
 }
