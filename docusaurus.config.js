@@ -52,30 +52,10 @@ const config = {
             label: "GitHub",
             position: "right",
           },
-        ],
-      },
-      footer: {
-        style: "dark",
-        links: [
           {
-            title: "Главы",
-            items: [
-              {
-                label: "Введение",
-                to: "installation",
-              },
-              { label: "Практика", to: "practice" },
-              { label: "Продвинутые темы", to: "advanced" },
-            ],
-          },
-          {
-            title: "Сообщество",
-            items: [
-              {
-                label: "Telegram",
-                href: "https://t.me/mobxjs_ru",
-              },
-            ],
+            href: "https://t.me/mobxjs_ru",
+            label: "Telegram",
+            position: "right",
           },
         ],
       },
