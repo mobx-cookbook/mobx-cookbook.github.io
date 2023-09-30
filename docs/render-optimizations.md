@@ -73,11 +73,11 @@ const App = observer(() => {
 
 **1. ESLint-правило**
 
-Для Mobx существует официальный [ESLint-плагин](https://github.com/mobxjs/mobx/tree/main/packages/eslint-plugin-mobx). Нам нужно правило [mobx/missing-observer](https://github.com/mobxjs/mobx/tree/main/packages/eslint-plugin-mobx#mobxmissing-observer). Оно проверяет, что все функциональные и классовые компоненты являются observer'ами. У правила доступен autofix, это значит что оно может автоматически исправлять код если запустить ESLint с опцией [--fix](https://eslint.org/docs/latest/user-guide/command-line-interface#--fix).
+Для Mobx существует официальный [ESLint-плагин](https://github.com/mobxjs/mobx/tree/main/packages/eslint-plugin-mobx). Нам нужно правило [mobx/missing-observer](https://github.com/mobxjs/mobx/tree/main/packages/eslint-plugin-mobx#mobxmissing-observer). Оно проверяет, что все функциональные и классовые компоненты являются observer'ами. У правила доступен autofix, поэтому оно может автоматически исправлять код если запустить ESLint с опцией [--fix](https://eslint.org/docs/latest/user-guide/command-line-interface#--fix).
 
 **2. Сниппет для редактора кода.** 
 
-В редакторе кода можно создать шаблон, создающий компонент, который уже обёрнут в observer. Пример для WebStorm:
+В редакторе кода можно создать шаблон для компонента, который уже обёрнут в observer. Пример для WebStorm:
 
 Если конвенция именования SomeComponent.tsx -> SomeComponent
 
@@ -90,18 +90,7 @@ export const $NAME = observer(() => {
 })
 ```
 
-Если конвенция именования some-component.tsx -> SomeComponent:
-
-```typescript
-import React from 'react';
-import { observer } from 'mobx-react-lite';
-
-export const ${StringUtils.removeAndHump($NAME, "-")} = observer(() => {
-  
-})
-```
-
-Для описания шаблонов используется язык Apache Velocity, а сами шаблоны настраиваются в [Settings -> Editor -> File and Code Templates](https://www.jetbrains.com/help/webstorm/settings-file-and-code-templates.html). Для VSCode можно попробовать воспользоваться [плагинами](https://marketplace.visualstudio.com/items?itemName=bam.vscode-file-templates) либо сторонними пакетами вроде [Plop.js](https://github.com/plopjs/plop)
+Для описания шаблонов используется язык Apache Velocity. Более подробно почитать про настройку шаблонов для WebStorm можно по [ссылке](https://habr.com/ru/articles/764510/). Для VSCode можно попробовать воспользоваться [плагинами](https://marketplace.visualstudio.com/items?itemName=bam.vscode-file-templates) либо сторонними пакетами вроде [Plop.js](https://github.com/plopjs/plop)
 
 ### Наблюдаемые массивы
 
