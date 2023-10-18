@@ -25,12 +25,12 @@ Mobx активно используется, что подтверждают к
 - СДЭК: https://www.youtube.com/watch?v=5MdwNGttfLg
 
 ### Open Source
-- [cypress](https://github.com/cypress-io/cypress) (~39k ⭐) - Инструмент для E2E-тестирования
-- [redoc](https://github.com/Redocly/redoc) (~17k ⭐) - Генератор OpenAPI/Swagger документации
-- [lens](https://github.com/lensapp/lens) (~19k ⭐) - Программа для управления Kubernetes
-- [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer) (~12k ⭐) - Утилита для анализа бандлов
-- [alibaba/lowcode-engine](https://github.com/alibaba/lowcode-engine) (~7k ⭐) - Alibaba тоже использует Mobx
-- [previewjs](https://github.com/fwouts/previewjs) (~1k ⭐) - Расширение для VSCode/Webstorm
-- [signal](https://github.com/ryohey/signal) (~700 ⭐) - Онлайн музыкальный секвенсор
-
+| Репозиторий                                                                           | Кол-во звёзд | Описание                               | Пример использования Mobx                                                                                                                                                                                     |
+|---------------------------------------------------------------------------------------|--------------|----------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Cypress]( https://github.com/cypress-io/cypress)                                     | ~45k         | Инструмент для E2E-тестирования        | [MobxRunnerStore](https://github.com/cypress-io/cypress/blob/ff89ffa2b2ef36d02bff0588bb0582cfa8a6002d/packages/app/src/store/mobx-runner-store.ts#L17 )                                                       |
+| [redoc](https://github.com/Redocly/redoc)                                             | ~21k         | Генератор OpenAPI/Swagger документации | [MenuStore](https://github.com/Redocly/redoc/blob/25394b7aba306755a5cf78dc49217b8c2d23375c/src/services/MenuStore.ts)                                                                                         |
+| [lens](https://github.com/lensapp/lens)                                               | ~21k         | Программа для управления Kubernetes    | [EntityRegistry](https://github.com/lensapp/lens/blob/f1a960fd785b62a118acd8b1525d879f39917e21/packages/core/src/main/catalog/entity-registry.ts#L6)                                                          |
+| [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer) | ~12k         | Утилита для анализа бандлов            | [Store](https://github.com/webpack-contrib/webpack-bundle-analyzer/blob/f01056a51fa16f3274204b5b98bba1be3a3f496d/client/store.js)                                                                             |
+| [cloudbeaver](https://github.com/dbeaver/cloudbeaver)                                 | ~2k          | Менеджер баз данных                    | [ResultSetEditAction](https://github.com/dbeaver/cloudbeaver/blob/ab985673b0cce1ea071e2069c2f0353aff9ae489/webapp/packages/plugin-data-viewer/src/DatabaseDataModel/Actions/ResultSet/ResultSetEditAction.ts) |
+| [signal](https://github.com/ryohey/signal)                                            | ~1k          | Онлайн музыкальный секвенсор           | [MIDIDeviceStore](https://github.com/ryohey/signal/blob/76ae0ecce53a5c9a3a5e0b6c2136f16fefbf2d4e/src/main/stores/MIDIDeviceStore.ts#L4)                                                                       |
 Для проверки того, используется ли Mobx в проекте на GitHub, достаточно внутри репозитория в поиске вбить "mobx". Пример результата: https://github.com/Redocly/redoc/search?q=mobx
