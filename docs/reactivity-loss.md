@@ -35,7 +35,7 @@ const Counter = () => {
 }
 ```
 
-✅ Работает, так как есть observer:
+#### ✅ Работает, так как есть observer:
 
 ```typescript jsx
 class Store {
@@ -102,7 +102,7 @@ This потерялся из-за передачи метода стора в о
 
 Однако есть способы исправить все эти примеры.
 
-✅  **Опция autoBind в makeAutoObservable**:
+#### ✅ Опция autoBind в makeAutoObservable:
 
 ```typescript jsx
 class Store {
@@ -128,7 +128,7 @@ const Counter = observer(() => {
 
 Эта опция автоматически привязывает this для всех методов класса.
 
-✅ **Методы-стрелочные функции**:
+#### ✅ Методы-стрелочные функции:
 
 ```typescript jsx
 class Store {
@@ -205,8 +205,9 @@ const Component = observer(() => {
 
 Выходов есть несколько.
 
-✅ Используем toJS для конвертации observable значений в чистый JS объект или массив, что даёт новую ссылку на каждый
-рендер
+#### ✅ toJS
+
+Используем toJS для конвертации observable значений в чистый JS объект или массив, что даёт новую ссылку на каждый рендер:
 
 ```typescript jsx
 import { toJS } from 'mobx'
@@ -232,7 +233,7 @@ const Component = observer(() => {
 })
 ```
 
-✅ Пишем собственный компонент Table, обёрнутый в observer
+#### ✅ Пишем собственный компонент Table, обёрнутый в observer
 
 ```typescript jsx
 import { toJS } from 'mobx'
@@ -295,7 +296,7 @@ const MyForm = observer(() => {
 она не может выполнить подписку на observable значения. Как следствие, даже если поле `store.languages` обновится после
 загрузки данных с сервера, то компонент всё равно не перерисуется. Есть несколько вариантов решений.
 
-✅ Используем Observer из `mobx-react-lite`/`mobx-react`
+#### ✅ Используем Observer из `mobx-react-lite`/`mobx-react`
 
 ```typescript jsx
 import { Form } from 'react-final-form'
@@ -322,7 +323,7 @@ const MyForm = observer(() => {
 
 Этот компонент доступен как в mobx-react-lite, так и в mobx-react (так как второй [экспортирует](https://github.com/mobxjs/mobx/blob/b82c7f3229439a6a1f0d35ebb559dc6b0fd0bec7/packages/mobx-react/src/index.ts#L7+L17) первый).
 
-✅ Отказываемся от render props в пользу хуков:
+#### ✅ Отказываемся от render props в пользу хуков:
 
 ```typescript jsx
 import { Observer } from 'mobx-react-lite'
@@ -345,3 +346,89 @@ const MyForm = observer(() => {
 ```
 
 Мы рассмотрели основные сценарии потери реактивности. Если освоить инструмент, который вы используете, то проблем, в общем случае, возникать не должно, так как все вышеперечисленные проблемы (кроме this) об одном и том же - отсутствие подписки.
+
+
+### Устаревшая конфигурация бандлера
+
+Если используется устаревшая конфигурация Babel / TypeScript, то `makeAutoObservable` может игнорировать неинициализированные поля:
+
+```typescript
+class Store {
+  count?: number
+
+  constructor() {
+    makeAutoObservable(this)
+  }
+}
+```
+
+В таком случае изменения поля `count` не будет вызывать перерисовку компонента. Для проверки бандлера используйте следующий скрипт, который нужно добавить в код приложения:
+
+```javascript
+if (!new class { x }().hasOwnProperty('x')) throw new Error('Transpiler is not configured correctly');
+```
+
+Обратите внимание, что скрипт нужно вставить в код, а не в консоль браузера. А вот если после перезапуска кода в консоли бразуера видно исключение, то есть разные способы решения проблемы:
+
+#### ✅ TypeScript
+
+В `tsconfig.json` добавьте параметр `useDefineForClassFields: true`:
+
+```json
+{
+  "compilerOptions": {
+    "useDefineForClassFields": true
+  }
+}
+```
+
+Либо проверьте значение `target` в секции `compilerOptions`. Должно быть указано _ESNext_ или _ES2022_ (и выше)
+
+#### ✅ Babel
+
+```{
+    // Babel < 7.13.0
+    "plugins": [["@babel/plugin-proposal-class-properties", { "loose": false }]],
+
+    // Babel >= 7.13.0 (https://babeljs.io/docs/en/assumptions)
+    "plugins": [["@babel/plugin-proposal-class-properties"]],
+    "assumptions": {
+        "setPublicClassFields": false
+    }
+}
+```
+
+Минимальная версия Babel должна быть 7.12.
+
+#### ✅ Инициализация значения
+
+Если никакие другие способы не помогли, то инициализируйте поле в конструкторе:
+
+```typescript
+class Store {
+  count?: number = undefined // Или count = 0
+
+  constructor() {
+    makeAutoObservable(this)
+  }
+}
+```
+
+#### Безопасно ли менять настройки бандлера?
+
+Да. Классовые поля появились в TS и Babel до стандартизации в ES. `useDefineForClassFields: true` исправляет [неконсистентность](https://www.typescriptlang.org/tsconfig#useDefineForClassFields) со стороны TS. С опцией `useDefineForClassFields` для вышеописанного класса TypeScript сгенерирует следующий JS:
+
+```javascript
+class Store {
+  count
+}
+```
+
+Без этой опции поле будет отсутствовать:
+
+```javascript
+class Store {
+}
+```
+
+`makeAutoObservable` не может пометить несуществующее поле observable, поэтому компонент не будет реагировать на изменения.
