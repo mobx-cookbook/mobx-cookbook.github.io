@@ -146,7 +146,7 @@ export type PlayerStore = {
 
 Как же восстановить union-тип? Есть несколько обходных путей, но все они далеки от идеального.
 
-#### Кастование типов
+### Кастование типов
 
 ```typescript
 export const createPlayerStore = () => {
@@ -170,9 +170,7 @@ dog.bark(); // Ошибка в рантайме, но нет ошибки ком
 
 Подтверждение на [TypeScript Playground](https://www.typescriptlang.org/play?#code/MYGwhgzhAEAiD2BzaBvAUNaAjMAnA1gBQCUqAvmhWsPAHYQAu0AJkgFxxLQC850knRAG40rRADocBEkOgB6OdEC4IIFYQQEIg0QHwggCRBAHCCBGEEBcILuiHNgHhBA-CC7A3CCB5EEBiILt1A).
 
-И таких примеров можно создать много.
-
-#### Вспомогательная функция для вывода типов
+### Вспомогательная функция для вывода типов
 
 Для избежания кастования типов можно использовать вспомогательную функцию, использующую [дженерики](https://www.typescriptlang.org/docs/handbook/2/generics.html). Полный пример выглядит так:
 
