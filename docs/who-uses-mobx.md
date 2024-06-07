@@ -6,6 +6,7 @@ Mobx активно используется, что подтверждают к
 - [Amazon](https://github.com/mobxjs/mobx/discussions/681#discussioncomment-104604)
 - [Netflix](https://github.com/mobxjs/mobx/discussions/681#discussioncomment-104674)
 - [Microsoft](https://github.com/mobxjs/mobx/discussions/681#discussioncomment-420684)
+- [Canva](https://github.com/mobxjs/mobx/issues/3772)
 - [Coinbase](https://github.com/mobxjs/mobx/discussions/681#discussioncomment-104579)
 - [Oracle](https://github.com/mobxjs/mobx/discussions/681#discussioncomment-104687)
 - [Baidu](https://github.com/mobxjs/mobx/discussions/681#discussioncomment-104688)

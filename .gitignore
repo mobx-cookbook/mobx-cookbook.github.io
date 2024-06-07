@@ -3,3 +3,4 @@
 .cache-loader
 .idea
 deploy-egor.sh
+.DS_Store
