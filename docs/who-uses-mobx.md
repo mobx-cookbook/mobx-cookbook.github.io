@@ -13,8 +13,8 @@ Mobx активно используется, что подтверждают к
 
 ### Какие сайты используют
 Список сайтов, сгенерированный анализатором JS-бандлов GradeJS:
-- https://gradejs.com/package/mobx
-- https://gradejs.com/package/mobx-react-lite
+- [mobx](https://web.archive.org/web/20230603023447/https://gradejs.com/package/mobx)
+- [mobx-react-lite](https://web.archive.org/web/20231001185652/https://gradejs.com/package/mobx-react-lite)
 
 В числе прочих сайтов есть udemy.com, grammarly.com, steamcommunity.com, postman.com
 
