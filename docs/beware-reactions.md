@@ -115,21 +115,24 @@ class BrokenStore {
   constructor() {
     makeAutoObservable(this)
     autorun(() => {
+      const subtotal = this.shop.items.reduce(
+        (acc, item) => acc + item.value,
+        0
+      );
       runInAction(() => {
-        this.subtotal = this.shop.items.reduce(
-          (acc, item) => acc + item.value,
-          0
-        )
+        this.subtotal = subtotal;
+      });
+    })
+    autorun(() => {
+      const tax = this.subtotal * (this.shop.taxPercent / 100);
+      runInAction(() => {
+        this.tax = tax;
       })
     })
     autorun(() => {
+      const total = this.tax + this.subtotal;
       runInAction(() => {
-        this.tax = this.subtotal * (this.shop.taxPercent / 100)
-      })
-    })
-    autorun(() => {
-      runInAction(() => {
-        this.total = this.tax + this.subtotal
+        this.total = total;
       })
     })
   }
