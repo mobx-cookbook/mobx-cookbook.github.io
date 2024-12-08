@@ -6,4 +6,3 @@
 
 - USDT (сеть TRC20) - TAz2h33BGHhraFxD9RP2kv5X5aUiuzxSEg
 - USDT (сеть ERC20) - 0xa243e09e52db889aa9cbb0cca6179e17c948736b
-- Баты (THB) - 169-3-56129-5 (Kasikorn Bank, на имя EGOR GORBACHEV)
