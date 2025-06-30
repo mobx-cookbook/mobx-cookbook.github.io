@@ -2,10 +2,12 @@
 
 ### Начало работы
 
-Для начала убедитесь, что на вашем компьютере установлен [Node.js и npm](https://nodejs.org/ru/download/). Мы рекомендуем использовать последнюю версию LTS. В данном руководстве мы будем использовать примеры кода на TypeScript и интеграцию с React, поэтому нам нужна среда для транспиляции и сборки проекта. Для этих целей отлично подходит [Create React App](https://create-react-app.dev):
+Для начала убедитесь, что на вашем компьютере установлен [Node.js и npm](https://nodejs.org/ru/download/). Мы рекомендуем использовать последнюю версию LTS. В данном руководстве мы будем использовать примеры кода на TypeScript и интеграцию с React, поэтому нам нужна среда для транспиляции и сборки проекта. Для этих целей отлично подходит [Vite](https://vitejs.dev/):
 
 ```sh
-npx create-react-app my-app --template typescript
+npm create vite@latest my-app -- --template react-ts
+cd my-app
+npm install
 ```
 
 ### MobX
