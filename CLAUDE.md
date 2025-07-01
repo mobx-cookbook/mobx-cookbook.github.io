@@ -42,7 +42,7 @@ Documentation is organized through `sidebars.js` into sections:
 
 ### Deployment
 
-- Uses GitHub Pages deployment via `deploy.sh`
+- Uses GitHub Pages deployment via GitHub Actions
 - Base URL configured for `mobx-cookbook.github.io`
 - Includes Yandex Metrica analytics
 
