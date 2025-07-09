@@ -4,7 +4,7 @@
 
 There are many ways to manage state in React. Redux, while being the most popular solution, is not always the best option for work.
 
-In this book, you will get acquainted with MobX - a simple and efficient library that allows you to neatly organize complex domain models into objects and classes. Code examples will be written in TypeScript to get all the benefits of a strongly typed language.
+In this book, you will get familiar with MobX - a simple and efficient library that allows you to neatly organize complex domain models into objects and classes. Code examples will be written in TypeScript to get all the benefits of a strongly typed language.
 
 Structurally, the book chapters can be divided into three major blocks. The first block introduces the reader to the basic concepts of MobX, such as observable objects, actions, and reactions. The second block sequentially describes building real applications with MobX including routing, forms, and tests. The third block describes advanced topics for in-depth understanding of MobX.
 
