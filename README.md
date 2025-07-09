@@ -1,25 +1,29 @@
-# Аннотация
+<p align="center">
+  Readme: <a href="./README.md">English</a>, <a href="./README.ru.md">Русский</a>
+</p>
 
-Существует много способов управлять состоянием в React. Redux, хотя и является самым популярным решением, не всегда лучший вариант для работы.
+# Abstract
 
-В книге вы познакомитесь с MobX - простой и эффективной библиотекой, которая позволяет аккуратно упорядочить сложные модели предметной области в объекты и классы. Примеры кода будут написаны на TypeScript, чтобы получить все преимущества строго типизированного языка.
+There are many ways to manage state in React. Redux, while being the most popular solution, is not always the best option for work.
 
-Структурно главы книги можно разделить на три крупных блока. Первый блок знакомит читателя с основными понятиями MobX, такими как наблюдаемые объекты, действия и реакции. Второй блок последовательно описывает построение реальных приложений на Mobx с роутингом, формами и тестами. Третий блок описывает продвинутые темы для углублённого понимания Mobx.
+In this book, you will get acquainted with MobX - a simple and efficient library that allows you to neatly organize complex domain models into objects and classes. Code examples will be written in TypeScript to get all the benefits of a strongly typed language.
 
-## Об авторах
+Structurally, the book chapters can be divided into three major blocks. The first block introduces the reader to the basic concepts of MobX, such as observable objects, actions, and reactions. The second block sequentially describes building real applications with MobX including routing, forms, and tests. The third block describes advanced topics for in-depth understanding of MobX.
 
-**Егор Горбачёв** - фулл-стек разработчик, состоит в core team MobX, автор статей по MobX и TypeScript. Призёр конкурсов для разработчиков от Telegram. [GitHub](https://github.com/kubk).
+## About the Authors
 
-**Гафаров Назим** - популяризатор MobX. Работал как в стартапах, так и в крупных компаниях (Яндекс, Mail) в роли ведущего разработчика. Регулярно выступает на IT-конференциях, в том числе на HolyJS и React Moscow. [GitHub](https://github.com/zapolnoch).
+**Egor Gorbachev** - full-stack developer, member of the MobX core team, author of articles on MobX and TypeScript. Winner of developer contests from Telegram. [GitHub](https://github.com/kubk).
 
-## Спонсоры
+**Nazim Gafarov** - MobX popularizer. Has worked in both startups and large companies (Yandex, Mail) as a lead developer. Regularly speaks at IT conferences, including HolyJS and React Moscow. [GitHub](https://github.com/zapolnoch).
 
-Мы очень ценим [поддержку](https://mobx-cookbook.github.io/support) книги. Спасибо тем, кто помогает написанию и придаёт больше мотивации продолжать:
+## Sponsors
+
+We greatly appreciate the [support](http://mobx-cookbook.github.io/en/support) of the book. Thanks to those who help with writing and give more motivation to continue:
 
 - Igor «InoY» Zvyagintsev ([@inoyakaigor](https://github.com/inoyakaigor))
 - Sergey Sibara ([@sergeysibara](https://github.com/sergeysibara))
 - Yuri Mikhin ([@mikhin](https://github.com/mikhin))
 
-### Лицензия
+### License
 
-Все содержимое лицензировано по лицензии [Creative Commons Attribution Non Commercial Share Alike 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ru).
+All content is licensed under the [Creative Commons Attribution Non Commercial Share Alike 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.

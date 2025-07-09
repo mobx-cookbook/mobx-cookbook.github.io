@@ -14,16 +14,7 @@ const sidebars = {
         "actions",
         "async-actions",
         "reduce-mobx-api-boilerplate",
-        {
-          type: "category",
-          label: "Доступ к состоянию",
-          link: { type: "doc", id: "react-integration/react-integration" },
-          items: [
-            "react-integration/singleton",
-            "react-integration/context-api",
-            "react-integration/conclusion",
-          ],
-        },
+        "react-integration/react-integration",
       ],
     },
     {
