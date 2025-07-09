@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 
 const observable = (value) => ({
   value,
-  // Set, состоящий из колбеков
   observers: new Set(),
   subscribe(observer) {
     this.observers.add(observer)
