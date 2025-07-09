@@ -14,7 +14,21 @@ const config = {
 
   i18n: {
     defaultLocale: "ru",
-    locales: ["ru"],
+    locales: ["ru", "en"],
+    localeConfigs: {
+      ru: {
+        label: "Русский",
+        direction: "ltr",
+        htmlLang: "ru",
+        calendar: "gregory",
+      },
+      en: {
+        label: "English",
+        direction: "ltr",
+        htmlLang: "en-US",
+        calendar: "gregory",
+      },
+    },
   },
 
   plugins: [
@@ -47,6 +61,10 @@ const config = {
           src: "favicon.png",
         },
         items: [
+          {
+            type: "localeDropdown",
+            position: "right",
+          },
           {
             href: "https://github.com/mobx-cookbook/cookbook",
             label: "GitHub",

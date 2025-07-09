@@ -28,28 +28,13 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "Практика",
-      link: { type: "doc", id: "practice" },
-      items: [],
-    },
-    {
-      type: "category",
       label: "Продвинутые темы",
       link: { type: "doc", id: "advanced" },
       items: ["render-optimizations", "mobx-inside", "beware-reactions", "reactivity-loss", "classess-vs-functions"],
     },
-    {
-      type: "category",
-      label: "Поддержка книги",
-      link: { type: "doc", id: "support" },
-      items: [],
-    },
-    {
-      type: "category",
-      label: "Awesome Mobx",
-      link: { type: "doc", id: "awesome" },
-      items: ["who-uses-mobx"],
-    },
+    "support",
+    "awesome",
+    "who-uses-mobx",
   ],
 }
 

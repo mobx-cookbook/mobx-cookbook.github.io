@@ -1,0 +1,18 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Введение": {
+    "message": "Introduction",
+    "description": "The label for category Введение in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Доступ к состоянию": {
+    "message": "State Access",
+    "description": "The label for category Доступ к состоянию in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Продвинутые темы": {
+    "message": "Advanced Topics",
+    "description": "The label for category Продвинутые темы in sidebar tutorialSidebar"
+  }
+}

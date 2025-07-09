@@ -7,8 +7,10 @@
   },
   "scripts": {
     "start": "npx docusaurus start",
+    "start:en": "npx docusaurus start --locale en",
     "prettier": "npx prettier src --write",
-    "build": "npx docusaurus build"
+    "build": "npx docusaurus build",
+    "build:en": "npx docusaurus build --locale en"
   },
   "dependencies": {
     "@codesandbox/sandpack-react": "^2.0.17",
