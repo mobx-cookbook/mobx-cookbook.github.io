@@ -2,8 +2,6 @@
   Readme: <a href="./README.md">English</a>, <a href="./README.ru.md">Русский</a>
 </p>
 
-# Abstract
-
 There are many ways to manage state in React. Redux, while being the most popular solution, is not always the best option for work.
 
 In this book, you will get acquainted with MobX - a simple and efficient library that allows you to neatly organize complex domain models into objects and classes. Code examples will be written in TypeScript to get all the benefits of a strongly typed language.

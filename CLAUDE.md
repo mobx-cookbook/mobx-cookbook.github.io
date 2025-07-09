@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Russian-language MobX cookbook built with Docusaurus 2. It serves as educational documentation for MobX state management in React applications. The site is deployed to GitHub Pages and includes interactive code examples using Sandpack.
+This is a multi-language MobX cookbook built with Docusaurus 2, currently available in Russian and English. It serves as educational documentation for MobX state management in React applications. The site is deployed to GitHub Pages and includes interactive code examples using Sandpack.
 
 ## Development Commands
 
@@ -21,7 +21,7 @@ npm run prettier
 
 ## Architecture
 
-- **Documentation Framework**: Docusaurus 2.3.1 with Russian localization
+- **Documentation Framework**: Docusaurus 2.3.1 with multi-language support
 - **Interactive Examples**: Uses `@codesandbox/sandpack-react` for live code editing
 - **Content Structure**: Markdown documentation in `/docs` with custom React components
 - **Code Examples**: Located in `/src/components/code-viewer/` with separate directories for each example
