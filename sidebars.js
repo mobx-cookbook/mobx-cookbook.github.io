@@ -14,7 +14,7 @@ const sidebars = {
         "actions",
         "async-actions",
         "reduce-mobx-api-boilerplate",
-        "react-integration/react-integration",
+        "react-integration",
       ],
     },
     {

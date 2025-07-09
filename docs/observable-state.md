@@ -42,6 +42,8 @@ class Store {
 import { makeObservable, observable, action, computed } from 'mobx'
 
 class Store {
+  count = 0
+
   constructor() {
     makeObservable(this, {
       count: observable,
@@ -50,8 +52,6 @@ class Store {
       double: computed,
     })
   }
-
-  count = 0
 
   inc = () => {
     this.count++
@@ -77,40 +77,6 @@ class Store {
 
 Одна из особенностей `computed` заключается в том, что он запоминает вычисленный результат. То есть, когда вычисление завершено, MobX сравнивает новый результат с предыдущим. Если результат совпадает, то уведомление наблюдателям не будет отправлено.
 
-### Декораторы
-
-В старых версиях MobX декораторы были рекомендуемым синтаксисом для написания классов. Во многих статьях и руководствах используется такое написание, поэтому с ним нужно быть знакомым.
-
-```js
-import { makeObservable, observable, action, computed } from 'mobx'
-
-class Store {
-  constructor() {
-    makeObservable(this)
-  }
-
-  @observable count = 0
-
-  @action inc = () => {
-    this.count++
-  }
-
-  @action dec = () => {
-    this.count--
-  }
-
-  @computed get double() {
-    return this.count * 2
-  }
-}
-```
-
-Вместо передачи карты аннотаций в `makeObservable`, мы декорируем поля и методы классы по месту их объявления. Если мы используем такой способ, то должны включить флаг для поддержки экспериментальных декораторов в файле `tsconfig.json`:
-
-```json
-"experimentalDecorators": true
-```
-
 ### makeAutoObservable
 
 В принципе можете выбирать любой способ декорирования какой вам больше нравится. На практике чаще всего используется `makeAutoObservable`.
@@ -119,11 +85,11 @@ class Store {
 import { makeAutoObservable } from 'mobx'
 
 class Store {
+  count = 0
+
   constructor() {
     makeAutoObservable(this)
   }
-
-  count = 0
 
   inc = () => {
     this.count++

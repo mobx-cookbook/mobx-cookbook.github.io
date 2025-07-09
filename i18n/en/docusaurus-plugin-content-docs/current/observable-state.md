@@ -77,40 +77,6 @@ The `double` getter is marked as `computed`. Computed values are derived from st
 
 One feature of `computed` is that it memoizes the calculated result. That is, when the calculation is complete, MobX compares the new result with the previous one. If the result matches, no notification will be sent to observers.
 
-### Decorators
-
-In older versions of MobX, decorators were the recommended syntax for writing classes. Many articles and guides use this notation, so you need to be familiar with it.
-
-```js
-import { makeObservable, observable, action, computed } from 'mobx'
-
-class Store {
-  constructor() {
-    makeObservable(this)
-  }
-
-  @observable count = 0
-
-  @action inc = () => {
-    this.count++
-  }
-
-  @action dec = () => {
-    this.count--
-  }
-
-  @computed get double() {
-    return this.count * 2
-  }
-}
-```
-
-Instead of passing an annotation map to `makeObservable`, we decorate fields and class methods where they are declared. If we use this approach, we must enable the flag for experimental decorators support in `tsconfig.json`:
-
-```json
-"experimentalDecorators": true
-```
-
 ### makeAutoObservable
 
 In principle, you can choose any decoration method you like. In practice, `makeAutoObservable` is most commonly used.
