@@ -6,6 +6,7 @@ const sidebars = {
     {
       type: "category",
       label: "Введение",
+      collapsed: false,
       items: [
         "installation",
         "classes",
@@ -21,6 +22,7 @@ const sidebars = {
       type: "category",
       label: "Продвинутые темы",
       link: { type: "doc", id: "advanced" },
+      collapsed: false,
       items: ["render-optimizations", "mobx-inside", "beware-reactions", "reactivity-loss", "classess-vs-functions"],
     },
     "support",

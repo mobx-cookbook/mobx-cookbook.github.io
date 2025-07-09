@@ -13,6 +13,6 @@ A list of talks, articles, and packages recommended for review.
 
 ### Project Examples
 - [alias](https://github.com/kubk/alias) - Simple implementation of the famous game where you need to explain words without naming them
-- [memocard](https://github.com/kubk/memocard) - mini-app that won a prize in the Telegram competition. [Article](https://habr.com/ru/articles/779508/)
+- [memocard](https://github.com/kubk/memocard) - app that won a prize in the Telegram competition. [Article](https://teletype.in/@alteregor/memocard-telegram-contest-win)
 
 Want to add your MobX project? [Create a PR](https://github.com/mobx-cookbook/mobx-cookbook.github.io/pulls) to this repository.
