@@ -10,6 +10,8 @@ A list of talks, articles, and packages recommended for review.
 - [mobx-persist-store](https://github.com/quarrant/mobx-persist-store) - Synchronization of store fields with localStorage
 - [mobx-shallow-undo](https://github.com/httptoolkit/mobx-shallow-undo/) - Undo & redo for MobX
 - [mobx-store-inheritance](https://github.com/inoyakaigor/mobx-store-inheritance) - Inheritance support for makeAutoObservable in MobX
+- [mobx-tanstack-query](https://github.com/js2me/mobx-tanstack-query) - Integration of Tanstack Query Core package with MobX
+- [mobx-web-api](https://github.com/js2me/mobx-web-api) - A set of MobX utilities for working with Web API
 
 ### Project Examples
 - [alias](https://github.com/kubk/alias) - Simple implementation of the famous game where you need to explain words without naming them

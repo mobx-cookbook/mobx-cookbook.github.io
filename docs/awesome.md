@@ -11,6 +11,8 @@
 - [mobx-persist-store](https://github.com/quarrant/mobx-persist-store) - Синхронизация полей стора с localStorage
 - [mobx-shallow-undo](https://github.com/httptoolkit/mobx-shallow-undo/) - Undo & redo для Mobx 
 - [mobx-store-inheritance](https://github.com/inoyakaigor/mobx-store-inheritance) - Поддержка наследования для makeAutoObservable в Mobx
+- [mobx-tanstack-query](https://github.com/js2me/mobx-tanstack-query) - Интеграция Tanstack Query Core пакета с MobX
+- [mobx-web-api](https://github.com/js2me/mobx-web-api) - Набор MobX утилит для работы с Web API
 
 ### Примеры проектов
 - [alias](https://github.com/kubk/alias) - Простая реализация знаменитой игры, в которой нужно объяснять слова, не называя их 
