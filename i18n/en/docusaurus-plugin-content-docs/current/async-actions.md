@@ -225,7 +225,7 @@ class Store {
 export const counterStore = new Store()
 ```
 
-This approach is the cleanest as it doesn't affect code nesting or the reaction scheduler. However, it has some typing complications. As a solution, you can use this helper function for MobX: https://github.com/mobxjs/mobx/discussions/3195#discussioncomment-2379437
+This approach is the cleanest as it doesn't affect code nesting or the reaction scheduler. However, it has some typing complications. As a solution, you can use this helper function for MobX: https://github.com/mobxjs/mobx/discussions/3195
 
 You can vote for this feature on GitHub to have it added to the MobX core.
 
